@@ -17,5 +17,6 @@ mycorpus <- tm_map(mycorpus, removeWords, c('rt','demonetisation','demonetizatio
 mycorpus <- tm_map(mycorpus, stripWhitespace,lazy=TRUE)
 mycorpusCopy <- mycorpus
 mycorpus <- tm_map(mycorpus, stemDocument,lazy=TRUE)
+mycorpus <- tm_map(mycorpus, stemCompletion, dictionary=mycorpusCopy,lazy=TRUE)
 mycorpus<-tm_map(mycorpus, PlainTextDocument,lazy=TRUE)
 myDtm <- DocumentTermMatrix(mycorpus)
