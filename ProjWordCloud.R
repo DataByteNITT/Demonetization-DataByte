@@ -18,6 +18,6 @@ mycorpus <- tm_map(mycorpus, stripWhitespace,mc.cores=1)
 mycorpusCopy <- mycorpus
 mycorpus <- tm_map(mycorpus, stemDocument,mc.cores=1)
 mycorpus<-tm_map(mycorpus, PlainTextDocument,mc.cores=1)
-myDtm <- DocumentTermMatrix(mycorpus, control = list(minWordLength = 3))
+wordcloud(mycorpus, min.freq = 50,max.words=100, rot.per=0.35, colors=brewer.pal(8, "Dark2"), scale = c(3,0.5))
 
 
