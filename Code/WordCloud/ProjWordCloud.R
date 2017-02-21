@@ -1,0 +1,22 @@
+library(readr)
+demonetization_tweets <- read_csv("~/dataset.csv")
+View(demonetization_tweets)
+text=demonetization_tweets$text
+install.packages("tm")
+library("NLP", lib.loc="~/R/win-library/3.3")
+install.packages("wordcloud")
+library("tm", lib.loc="~/R/win-library/3.3")
+mycorpus <- Corpus(VectorSource(text))
+mycorpus
+mycorpus <- tm_map(mycorpus, content_transformer(tolower),mc.cores=1)
+removeURL <- function(x) gsub("http[^[:space:]]*", "", x)
+mycorpus <- tm_map(mycorpus, removeURL,mc.cores=1)
+mycorpus <- tm_map(mycorpus, removePunctuation,mc.cores=1)
+mycorpus <- tm_map(mycorpus, removeNumbers,mc.cores=1)
+mycorpus <- tm_map(mycorpus, removeWords, c('rt','demonetisation','demonetization',stopwords('english')),mc.cores=1)
+mycorpus <- tm_map(mycorpus, stripWhitespace,mc.cores=1)
+mycorpusCopy <- mycorpus
+mycorpus <- tm_map(mycorpus, stemDocument,mc.cores=1)
+mycorpus<-tm_map(mycorpus, PlainTextDocument,mc.cores=1)
+  #wordcloud(mycorpus, min.freq = 100,max.words=500, rot.per=0.35, colors=brewer.pal(8, "Dark2"), scale = c(3,0.5))
+wordcloud(mycorpus,scale=c(4,.5),min.freq=50,max.words=250,random.order=TRUE, colors=brewer.pal(8, "Dark2"),random.color=TRUE, rot.per=.1,use.r.layout=FALSE,fixed.asp=TRUE)
