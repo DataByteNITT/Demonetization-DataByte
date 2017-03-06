@@ -33,6 +33,7 @@ Tweeter.
  6. stringr
  7. ggplot2
  8. readr
+ 9. qdap
  
 ----------
 **To read more on Demonetization:**
