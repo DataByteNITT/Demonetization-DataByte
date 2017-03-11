@@ -34,6 +34,8 @@ Tweeter.
  7. ggplot2
  8. readr
  9. qdap
+ 10. NLP
+ 11. RColorBrewer
  
 ----------
 **To read more on Demonetization:**
