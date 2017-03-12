@@ -117,6 +117,16 @@ tweetanalysis$sentiment[tweetanalysis$score > 0] = "Positive"
 tweetanalysis$sentiment[tweetanalysis$score < 0] = "Negative"
 tweetanalysis$sentiment <- factor(tweetanalysis$sentiment)
 
+#build tables of positive and negative sentences with scores
+Result <- as.data.frame(tweetanalysis)
+colnames(Result) <- c('Score','sentence', 'Sentiment') 
+
+#combine the positive and negative and neutral tables
+results <- rbind(Result) 
+
+#results
+write.csv(results, file='C:/Users/jeyassri/Desktop/TweetResults.csv', row.names=T)
+
 #Make a table of the score and count
 scoretable = table(tweetanalysis$score)
 score = tweetanalysis$score
