@@ -9,7 +9,7 @@ library("RColorBrewer")
 library("qdap")
 
 #Read the dataset into a variable
-dataset <- read_csv("demonetization-tweets.csv")
+dataset <- read_csv("~\\Datasets\\dataset.csv")
 
 #Store the 'text' column in a separate variable
 tweet = dataset$text
@@ -106,8 +106,9 @@ score.sentiment <- function(sentences, positive_words, negative_words, .progress
 }
 
 #Importing postive and negative words list
-positive <- scan('positive-words.txt', what='character', comment.char=';')
-negative <- scan('negative-words.txt', what='character', comment.char=';')
+positive <- scan('~OpinionLexicon\\positive-words.txt', what='character', comment.char=';')
+negative <- scan('~OpinionLexicon\\negative-words.txt', what='character', comment.char=';')
+
 
 #Retrieve scores
 tweetanalysis <- score.sentiment(tweet, positive, negative, .progress="none")
