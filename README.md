@@ -45,5 +45,6 @@ Tweeter.
  4. [Demonetization is to benefit the super rich: Rahul Gandhi](http://timesofindia.indiatimes.com/city/goa/Demonetization-is-to-benefit-the-super-rich-RaGa/articleshow/56028175.cms).
  5. [2016 Indian banknote demonetisation](https://en.wikipedia.org/wiki/2016_Indian_banknote_demonetisation).
  6. [BJP Parliamentary meet: Demonetization not end but beginning of struggle against black money, PM Modi says](http://timesofindia.indiatimes.com/india/BJP-Parliamentary-meet-Demonetization-not-end-but-beginning-of-struggle-against-black-money-PM-Modi-says/articleshow/55556995.cms).
+ 7. http://timesofindia.indiatimes.com/india/Over-93-percent-support-for-demonetisation-in-survey-on-PM-Narendra-Modis-app/articleshow/55584567.cms
 
 
